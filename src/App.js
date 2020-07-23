@@ -7,10 +7,11 @@ function App ({ t }) {
     i18n.changeLanguage(lng);
   }
 
+const getCurrentLng = () => i18n.language || window.localStorage.i18nextLng || '';
+
   return (
     <div>
-      <button onClick={() => changeLanguage('de')}>de</button>
-      <button onClick={() => changeLanguage('en')}>en</button>
+      <button onClick={() => changeLanguage(getCurrentLng)}></button>
       <h1>{t('Welcome to Polar')}</h1>
     </div>
   )
