@@ -16,7 +16,7 @@
     "i18next-xhr-backend": "^3.2.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-i18next": "^9.0.10",
+    "react-i18next": "^11.7.0",
     "react-scripts": "3.4.1",
     "source-map-loader": "^1.0.1",
     "typescript": "^3.7.5"

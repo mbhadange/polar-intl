@@ -1,3 +1,30 @@
+import React, { Suspense } from 'react';
+import './App.css';
+import { useTranslation } from 'react-i18next';
+
+function HeaderComponent() {
+  const [t, i18n] = useTranslation();
+  return <div>
+    <h1>{t('welcome_other')}</h1>
+    <button onClick={() => i18n.changeLanguage('de')}>de</button>
+    <button onClick={() => i18n.changeLanguage('en')}>en</button>
+  </div>
+}
+
+function App() {
+  return (
+    <Suspense fallback="loading">
+      <div className="App">
+        <HeaderComponent />
+      </div>
+    </Suspense>
+  );
+}
+
+export default App;
+
+/*
+
 import React from 'react';
 import i18n from './i18n';
 import { withNamespaces } from 'react-i18next';
@@ -47,3 +74,5 @@ const getCurrentLng = locales[0];
 }
 
 export default withNamespaces()(App);
+
+*/
