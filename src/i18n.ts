@@ -3,11 +3,10 @@ import { initReactI18next } from "react-i18next";
 
 //import translationEN from './en/translation.json';
 //import translationDE from './de/translation.json';
-import trans from './AppTrans.json';
+//import trans from './AppTrans.json';
 
-i18n
-  .use(initReactI18next) // passes i18n to react-i18next
-  .init({
+export default function createi18Inst(trans: any): typeof i18n {
+  let newi18n = i18n.createInstance({
     resources: trans,
     lng: "en",
 
@@ -20,6 +19,10 @@ i18n
     react: {
       wait: true
     }
+  }, (err, t) => {
+    if (err) return console.log('Error while loading', err);
+    t('key')
   });
-
-export default i18n;
+  newi18n.use(initReactI18next);
+  return newi18n;
+}

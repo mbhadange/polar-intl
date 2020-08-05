@@ -1,9 +1,11 @@
 import React, { Suspense } from 'react';
 import './App.css';
-import { useTranslation } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
+import trans from './AppTrans.json';
+import createi18Inst from "./i18n";
+//const newi18n = createi18Inst(trans);
 
-function HeaderComponent() {
-  const [t, i18n] = useTranslation();
+function HeaderComponent({ t, i18n }) {
   return <div>
     <h1>{t('welcome.title', { framework: 'React' })}</h1>
     <button onClick={() => i18n.changeLanguage('de')}>de</button>
@@ -11,11 +13,13 @@ function HeaderComponent() {
   </div>
 }
 
+const HeaderTrans = withTranslation()(HeaderComponent);
+
 function App() {
   return (
     <Suspense fallback="loading">
       <div className="App">
-        <HeaderComponent />
+        <HeaderTrans i18n={createi18Inst(trans)} />
       </div>
     </Suspense>
   );
