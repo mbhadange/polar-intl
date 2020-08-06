@@ -6,6 +6,7 @@ import createi18Inst from "./i18n";
 //const newi18n = createi18Inst(trans);
 
 import Article from './Article';
+import PolarInfo from './Polar';
 
 function HeaderComponent({ t, i18n }) {
   return <div>
@@ -23,6 +24,7 @@ function App() {
       <div className="App">
         <HeaderTrans i18n={createi18Inst(trans)} />
         <Article />
+        <PolarInfo />
       </div>
     </Suspense>
   );
