@@ -1,0 +1,26 @@
+{
+  "en": {
+    "translation": {
+      "header": {
+        "title": "How to Translate Items with React",
+        "subtitle": "Make your content accessible to people of different nations and languages!"
+      },
+      "content": {
+        "intro": "First, install i18next and react-i18next with npm.",
+        "body": "Then, you will want to initialize the i18next instance with the translations that you want. After that, you will use react-18next's withTranslation function to gain access to the translation function."
+      }
+    }
+  },
+  "de": {
+    "translation": {
+      "header": {
+        "title": "So übersetzen Sie Elemente mit React",
+        "subtitle": "Machen Sie Ihre Inhalte für Menschen verschiedener Nationen und Sprachen zugänglich!"
+      },
+      "content": {
+        "intro": "Installieren Sie zuerst i18next und reagieren react-i18next mit npm.",
+        "body": "Anschließend möchten Sie die i18next-Instanz mit den gewünschten Übersetzungen initialisieren. Danach verwenden Sie die withTranslation-Funktion von react-18next, um Zugriff auf die Übersetzungsfunktion zu erhalten."
+      }
+    }
+  }
+}
