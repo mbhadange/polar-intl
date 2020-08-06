@@ -5,6 +5,8 @@ import trans from './AppTrans.json';
 import createi18Inst from "./i18n";
 //const newi18n = createi18Inst(trans);
 
+import PolarInfo from './Polar';
+
 function HeaderComponent({ t, i18n }) {
   return <div>
     <h1>{t('welcome.title', { framework: 'React' })}</h1>
@@ -20,6 +22,7 @@ function App() {
     <Suspense fallback="loading">
       <div className="App">
         <HeaderTrans i18n={createi18Inst(trans)} />
+        <PolarInfo />
       </div>
     </Suspense>
   );
