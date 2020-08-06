@@ -8,7 +8,7 @@ import createi18Inst from "./i18n";
 import Article from './Article';
 import PolarInfo from './Polar';
 
-function HeaderComponent({ t, i18n }) {
+function HeaderComponent({t, i18n} : {t : any, i18n : any}) {
   return <div>
     <h1>{t('welcome.title', { framework: 'React' })}</h1>
     <button onClick={() => i18n.changeLanguage('de')}>de</button>
