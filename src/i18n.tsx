@@ -1,11 +1,8 @@
+import React from 'react';
 import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
+import { initReactI18next, Translation } from "react-i18next";
 
-//import translationEN from './en/translation.json';
-//import translationDE from './de/translation.json';
-//import trans from './AppTrans.json';
-
-export default function createi18Inst(trans: any): typeof i18n {
+function createi18Inst(trans: any): typeof i18n {
   let newi18n = i18n.createInstance({
     resources: trans,
     lng: "en",
@@ -26,3 +23,14 @@ export default function createi18Inst(trans: any): typeof i18n {
   newi18n.use(initReactI18next);
   return newi18n;
 }
+
+function TranslatedText(props: { textkey: string, i18n: typeof i18n, params?: object }) {
+  return (
+    <Translation i18n={props.i18n}>
+      {
+        (t, { i18n }) => (t(props.textkey, props.params))
+      }
+    </Translation>);
+}
+
+export { createi18Inst, TranslatedText };
