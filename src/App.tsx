@@ -4,7 +4,6 @@ import { useTranslation, withTranslation } from 'react-i18next';
 import trans from './AppTrans.json';
 //import { createi18Inst, TranslatedText } from "./i18n";
 //const newi18n = createi18Inst(trans);
-import './i18n';
 
 import Article from './Article';
 //import PolarInfo from './Polar';
