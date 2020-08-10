@@ -6,6 +6,7 @@ import trans from './AppTrans.json';
 //const newi18n = createi18Inst(trans);
 
 import Article from './Article';
+import PolarInfo from './Polar';
 //import PolarInfo from './Polar';
 
 /*function HeaderComponent() {
@@ -35,6 +36,7 @@ function App() {
       <div className="App">
         <HeaderComponent />
         <Article />
+        <PolarInfo />
         <button onClick={() => i18n.changeLanguage('de')}>de</button>
         <button onClick={() => i18n.changeLanguage('en')}>en</button>
       </div>
