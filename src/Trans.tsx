@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
+import { TFunction, i18n } from 'i18next';
 
-export default function useTranslationForComponent(trans?: any) {
+export default function useTranslationForComponent(trans?: any): [TFunction, i18n] {
 
   let [t, i18n] = useTranslation();
 
