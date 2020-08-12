@@ -1,7 +1,5 @@
 import { useTranslation } from 'react-i18next';
 
-
-
 export default function useTranslationForComponent(trans?: any) {
 
   let [t, i18n] = useTranslation();
@@ -32,7 +30,7 @@ export default function useTranslationForComponent(trans?: any) {
     }
   });
 
-  function newT(key: string, params?: any): string {
+  let newT: TFunction = function (key: string, params?: any): string {
     return params ? t(ns + ':' + key, params) : t(ns + ':' + key);
   }
 

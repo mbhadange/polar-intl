@@ -11,11 +11,11 @@ function HeaderComponent() {
   const [t, i18n] = useTranslationForComponent(trans);
   return (
     <div>
-      <h1>{t("title")}</h1>
+      <h1>{t("title", { framework: 'Polar' })}</h1>
     </div>
   );
 }
-//, { framework: 'React' }
+
 function App() {
   const [t, i18n] = useTranslationForComponent();
   return (
