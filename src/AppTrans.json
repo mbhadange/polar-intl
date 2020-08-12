@@ -1,16 +1,9 @@
 {
+  "filename": "App",
   "en": {
-    "translation": {
-      "welcome": {
-        "title": "Welcome to {{framework}}"
-      }
-    }
+    "title": "Welcome to {{framework}}"
   },
   "de": {
-    "translation": {
-      "welcome": {
-        "title": "Willkommen bei {{framework}}"
-      }
-    }
+    "title": "Willkommen bei {{framework}}"
   }
 }

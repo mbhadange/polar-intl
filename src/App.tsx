@@ -1,36 +1,23 @@
 import React, { Suspense } from 'react';
 import './App.css';
-import { useTranslation, withTranslation } from 'react-i18next';
 import trans from './AppTrans.json';
-//import { createi18Inst, TranslatedText } from "./i18n";
-//const newi18n = createi18Inst(trans);
+import useTranslationForComponent from './Trans';
 
 import Article from './Article';
 import PolarInfo from './Polar';
-//import PolarInfo from './Polar';
 
-/*function HeaderComponent() {
-  let i18n = createi18Inst(trans);
-  return (
-    <div>
-      <h1><TranslatedText textkey="welcome.title" i18n={i18n} params={{ framework: 'React' }} /></h1>
-      <button onClick={() => i18n.changeLanguage('de')}>de</button>
-      <button onClick={() => i18n.changeLanguage('en')}>en</button>
-    </div>
-  );
-}*/
 
 function HeaderComponent() {
-  const [t, i18n] = useTranslation();
+  const [t, i18n] = useTranslationForComponent(trans);
   return (
     <div>
-      <h1>{t("welcome.title", { framework: 'React' })}</h1>
+      <h1>{t("title")}</h1>
     </div>
   );
 }
-
+//, { framework: 'React' }
 function App() {
-  const [t, i18n] = useTranslation();
+  const [t, i18n] = useTranslationForComponent();
   return (
     <Suspense fallback="loading">
       <div className="App">
