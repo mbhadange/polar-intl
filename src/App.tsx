@@ -24,8 +24,8 @@ function App() {
         <HeaderComponent />
         <Article />
         <PolarInfo />
-        <button onClick={() => i18n.changeLanguage('de')}>de</button>
-        <button onClick={() => i18n.changeLanguage('en')}>en</button>
+        <button onClick={() => i18n.changeLanguage('de-DE')}>de</button>
+        <button onClick={() => i18n.changeLanguage('en-US')}>en</button>
       </div>
     </Suspense>
   );

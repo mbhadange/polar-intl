@@ -1,15 +1,15 @@
 {
   "filename": "Article",
-  "en": {
+  "en-US": {
     "title": "Translation Test",
-    "subtitle": "Date Published: {{date}}",
-    "plutest": "First, lets look at pluralization. {{count}} item.",
-    "plutest_plural": "First, lets look at pluralization. {{count}} items."
+    "subtitle": "Date Published: {{date, datetime}}",
+    "plutest": "First, lets look at pluralization. {{count, num}} item.",
+    "plutest_plural": "First, lets look at pluralization. {{count, num}} items."
   },
-  "de": {
+  "de-DE": {
     "title": "Übersetzungstest",
-    "subtitle": "Veröffentlichungsdatum: {{date}}",
-    "plutest": "Betrachten wir zunächst die Pluralisierung. {{count}} Gegenstand",
-    "plutest_plural": "Betrachten wir zunächst die Pluralisierung. {{count}} Gegenstände"
+    "subtitle": "Veröffentlichungsdatum: {{date, datetime}}",
+    "plutest": "Betrachten wir zunächst die Pluralisierung. {{count, num}} Gegenstand",
+    "plutest_plural": "Betrachten wir zunächst die Pluralisierung. {{count, num}} Gegenstände"
   }
 }
