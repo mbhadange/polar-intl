@@ -1,9 +1,0 @@
-{
-  "filename": "App",
-  "en-US": {
-    "title": "Welcome to {{framework}}"
-  },
-  "de-DE": {
-    "title": "Willkommen bei {{framework}}"
-  }
-}

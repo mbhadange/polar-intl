@@ -1,29 +1,15 @@
 import React, { Suspense } from 'react';
 import './App.css';
-import trans from './AppTrans.json';
 import useTranslationForComponent from './Trans';
 
 import Article from './Article';
-import PolarInfo from './Polar';
-
-
-function HeaderComponent() {
-  const [t, i18n] = useTranslationForComponent(trans);
-  return (
-    <div>
-      <h1>{t("title", { framework: 'Polar' })}</h1>
-    </div>
-  );
-}
 
 function App() {
   const [t, i18n] = useTranslationForComponent();
   return (
     <Suspense fallback="loading">
       <div className="App">
-        <HeaderComponent />
         <Article />
-        <PolarInfo />
         <button onClick={() => i18n.changeLanguage('de-DE')}>de</button>
         <button onClick={() => i18n.changeLanguage('en-US')}>en</button>
       </div>
