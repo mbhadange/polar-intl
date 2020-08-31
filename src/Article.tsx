@@ -1,20 +1,20 @@
-import React, { Suspense } from 'react';
-import './App.css';
-import { Translation, useTranslation } from 'react-i18next';
+import React, { useState } from 'react';
 import trans from './ArticleTrans.json';
-import AddTrans from './Trans';
-//import { createi18Inst, TranslatedText } from "./i18n";
+import useTranslationForComponent from './Trans';
 
 export default function Article() {
-  let [t, i18n] = useTranslation();
-  AddTrans(trans, "article");
-  //  i18n.addResources("en", "translation", trans["en"]);
-  //  i18n.addResources("de", "translation", trans["de"]);
+  const [t, i18n] = useTranslationForComponent(trans);
+  const [val, changeVal] = useState(1);
+
+  function onNumChangeHandler(event: any) {
+    changeVal(parseFloat(event.target.value));
+  }
+
   return (
     <div>
-      <h1>{t("article:title")}</h1>
-      <h3>{t("article:subtitle")}</h3>
-      <p>{t("article:intro")}</p>
-      <p>{t("article:body")}</p>
+      <h1>{t("title")}</h1>
+      <h3>{t("subtitle", { "date": new Date() })}</h3>
+      <input type="number" name="num" onInput={onNumChangeHandler} />
+      <p>{t("plutest", { "count": val })}</p>
     </div>);
 }
